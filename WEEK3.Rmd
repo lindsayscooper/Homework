@@ -21,12 +21,10 @@ data(mtcars)
   ncol(mtcars)
 
   head(mtcars)
-  rownames(
-    which.min(mtcars$hp)
-    )
- 
+  rownames(mtcars)[which.min(mtcars$hp)]
+    
   
-  which.min(mtcars$mpg)
+  rownames(mtcars) [which.min(mtcars$mpg)]
   
 ```
 
