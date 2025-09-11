@@ -1,0 +1,62 @@
+---
+title: "WEEK4"
+author: "Lindsay Cooper"
+date: "2025-09-09"
+output: html_document
+---
+
+
+```{r}
+library(helminthR)
+dat <- helminthR::loadData()
+
+```
+How many rows of data are there for iraq?
+
+Conditional is == 
+  - gives true or false equal to the same length as DAT for each row that country = iraq
+Which 
+  - gives indices corresponding with Iraq = country
+Indices nrow
+```{r}
+x <- nrow(dat[which(dat$country == 'Iraq'),])
+
+y <- subset(dat, dat$country == 'Iraq')
+```
+
+
+```{r echo=TRUE}
+tellMeIGood <- function(name){
+  nameOfPerson <- name
+  print(paste(name, ', you are good'))
+}
+```
+
+subset - in base, give two arguments, data you want to subset, how you want to subset 
+
+() only for a function, nrow, subset, which, start of if, start of for loop
+[] indexing, pulling something out of prexisting object ncommas is how many dimensions of array
+{} for loops, if statements, define boundary conditions, if condition is true then {do this}
+  - define protocols
+  
+```{r}
+
+```
+mexico used as default
+
+Linking conditionals
+what will is.na return -> vector, logical
+- can also be an or instead of an and
+using | (or)
+
+```{r}
+x <- 1:10
+if(any(is.na(x) & any(x>2))){
+  
+}
+
+
+
+```
+
+
