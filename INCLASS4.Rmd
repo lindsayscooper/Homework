@@ -1,0 +1,60 @@
+---
+title: "HW"
+author: "Lindsay Cooper"
+date: "2025-09-11"
+output: html_document
+---
+##InClass Problems
+
+```{r}
+dat <- read.csv("https://raw.githubusercontent.com/biolDataScience/biolDataScience.github.io/refs/heads/master/static/data/traitData.csv")
+
+plot(as.factor(dat$Family.2), dat$Beak.Depth)
+title('Beak Depth based on Family of Animal')
+points(y=dat$Beak.Depth, x=dat$Family.2, 
+       out.pch=16, pch=18,
+       col=1:4)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set.seed(123)
+```{r}
+set.seed(123)
+control <- rnorm(100, 2, 0.1)
+N <- rnorm(100, 3, 0.25)
+P <- rnorm(100, 3.5, 0.5)
+NP <- rnorm(100, 6, 0.4)
+```
+
+```{r}
+plantDF <- data.frame(performance=c(control, N, P, NP), 
+  treatment=c(
+    rep('control',100), rep('N', 100), 
+    rep('P', 100), rep('NP',100))
+)
+
+plot(as.factor(plantDF$treatment), plantDF$performance)
+
+boxplot(plantDF$performance ~ plantDF$treatment)
+```
+
