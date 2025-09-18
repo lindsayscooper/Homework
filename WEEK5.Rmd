@@ -1,0 +1,7 @@
+---
+title: "InClass5"
+author: "Lindsay Cooper"
+date: "2025-09-18"
+output: html_document
+---
+
