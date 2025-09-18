@@ -5,3 +5,22 @@ date: "2025-09-18"
 output: html_document
 ---
 
+```{r av length}
+library(stringr)
+data(sentences)
+mean(nchar(unique(unlist(sentences))))
+
+```
+
+```{r sentences with letter z}
+length(grep('z', (unique(unlist(sentences)))))
+```
+```{r fraction of sentences with as alone}
+length(grep(' as ', (unique(unlist(sentences))))) / length(unique(unlist(sentences)))
+
+```
+
+```{r sentences starting with t}
+length(grep('^T', (unique(unlist(sentences)))))
+```
+
