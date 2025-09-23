@@ -1,0 +1,55 @@
+---
+title: "SEPT23"
+author: "Lindsay Cooper"
+date: "2025-09-23"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r homework review}
+mtcars2 <- mtcars[order(mtcars$mpg, decreasing=TRUE),]
+
+#this is bad
+mtcars2 <- mtcars[order(-mtcars$mpg),]
+#why it's bad 
+
+test <- matrix(runif(100, -50, 50), ncol=5)
+test2 <- test[order(-test[,1]),]
+
+test2
+
+mtcars2 <- mtcars[rev(order(mtcars$mpg)),]
+#how to order character from higher to lower - just order() but defaults to alphabetical 
+
+mtcars2
+
+#avoid periods in variable names, no spaces in file names
+#keep variables distinct 
+
+
+#this will give the individual values by order
+sort(mtcars$mpg)
+mtcars$mpg[order(mtcars$mpg)]
+```
+
+```{r loading data}
+
+#load in virion 
+virion <- read.delim(gzfile('Virion.csv.gz'))
+#load in dplyr info 
+dat <- read.delim(file = "http://www.stat.ubc.ca/~jenny/notOcto/STAT545A/examples/gapminder/data/gapminderDataFiveYear.txt")
+
+#basic checks of data
+head(dat)
+str(dat)
+
+#gc()
+
+
+```
+```{r plyr & dplyr}
+
+```
+
